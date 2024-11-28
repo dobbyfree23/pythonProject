@@ -34,7 +34,7 @@ print("8. 문자 개수:", text.count('P'))                # count()
 print("9. 공백 제거:", text.strip())                   # strip()
 print("10. 문자열 합치기:", " ".join(words))           # join()
 
-# 예제 3: 수학과 관련된 내장 함수들
+# 예제 3: 수학과 관련된 함수들
 import math
 numbers = [3.14, -2.7, 5.0, -1.8, 2.5]
 print("1. 반올림:", round(3.7))                        # round()
