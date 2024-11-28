@@ -19,7 +19,11 @@ print('6. 리스트 길이:', len(number))
 # 예제2: 문자열과 관련된 내장함수들
 text = "Python Programming 123"
 words = ["apple", "banana", "cherry", "date"]
-print("1. 문자열이 알파벳인가?:", text.isalpha())        # isalpha()
+str_alpha = "ABC"
+str_numeric = "123"
+
+print("1-1. 문자열이 알파벳인가?:", str_alpha.isalpha())        # isalpha()
+print("1-2. 문자열이 숫자인가?:", str_numeric.isnumeric())        # isalpha()
 print("2. 대문자로:", text.upper())                     # upper()
 print("3. 소문자로:", text.lower())                     # lower()
 print("4. 문자열 분할:", text.split())                  # split()
