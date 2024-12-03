@@ -61,7 +61,6 @@ while i < 7:
             else:
                 print('*', end='')
         j+=1
-
     print()
     i+=1
 
