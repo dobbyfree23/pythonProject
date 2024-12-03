@@ -3,7 +3,8 @@
 
 메소드(method)
     특정 객체가 가지고 있는 함수를 의미한다.
-    객체명.메소드() 사용가능
+    객체.메소드() 사용가능
+
 '''
 # String 객체 format 메소드
 print('10자리 폭 왼 쪽 정렬 "{:<10d}"'.format(123))
@@ -53,4 +54,3 @@ print(result)
 s = 'Life is to short'
 result = s.replace('short', 'long')
 print(result)
-
