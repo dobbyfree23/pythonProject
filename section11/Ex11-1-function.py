@@ -16,7 +16,6 @@ def welcome():  # 매개변수 없음, 리턴값 없음 => 입력값없이 실�
     print('Hello, Python')
     print('Nice to meet you')
 
-
 print('프로그램 시작!')
 # 함수 호출(실행)
 welcome()
