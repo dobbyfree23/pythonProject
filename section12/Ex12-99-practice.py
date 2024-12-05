@@ -1,10 +1,10 @@
 '''
 Ex12-99-practice.py
 '''
-
 import random
 import time
 
+# 리스트 컴프리헨션(List Comprehension) 문법
 pot = [n for n in range(1, 46)]
 
 jackpot = []
