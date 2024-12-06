@@ -19,7 +19,7 @@ dict_list = [
         ]
     },
     {
-        'name':'alice',
+        'name':'홍길동',
         'age':21,
         'spec':[
             168.5,
@@ -28,9 +28,9 @@ dict_list = [
     }
 ]
 
-json_string = json.dump(dict_list)
+json_string = json.dumps(dict_list, indent=4, ensure_ascii=False)
 
-with open('dictList.json', 'w') as file:
+with open('dictList.json', 'w', encoding="UTF-8") as file:
     file.write(json_string)
 
 print('dictList.json 파일이 생성되었습니다.')
