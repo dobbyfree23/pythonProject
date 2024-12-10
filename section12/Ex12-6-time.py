@@ -11,15 +11,26 @@ timedelta
     datetime 모듈의 시간 연산을 위한 클래스
     날짜/시간의 차이를 계산하거나 더하고 뺄 때 사용
 
+
+zoneinfo 모듈 사용시 설치 패키지
+pip install tzdata
+
 '''
 import time
 from datetime import datetime, timedelta
+
+from zoneinfo import ZoneInfo
 
 
 # time.time(): Unix timestamp 반환 (1970년 1월 1일부터의 초)
 print(f'현재 timestamp: {time.time()}')
 print(f'현재 시간: {time.strftime("%Y.%m.%d. %H:%M:%S")}')
 print(f'현재 시간: {time.strftime("%Y년 %m월 %d일 %H:%M:%S")}')
+
+
+# 현재 시간을 서울 시간대로 가져오기
+seoul_time = datetime.now(ZoneInfo("Asia/Seoul"))
+print(f"서울 현재 시간: {seoul_time}")
 
 # datetime.now(): 현재 날짜와 시간을 datetime 객체로 반환
 now = datetime.now()
