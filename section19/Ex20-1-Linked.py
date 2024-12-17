@@ -49,10 +49,27 @@ class LinkedList:
 
         current.next = new_node
 
-
     def insert_node(self, find_data, insert_data):
         if self.head is None:
             return
+
+        '''
+        linked_list = [7, 3, 9, 1, 6]
+        
+        insert_node(9, 99)
+        find_data = 9
+        insert_data = 99
+        7 == 9 False
+        
+        current = Node(7)
+        
+        while current.next is not None:
+             if current.next.data == find_data # 9 == 9
+                new_node = Node(99, Node(1)주소값)
+                current.next = new_node
+            current = current.next   #  current = Node(3)
+        
+        '''
 
         if self.head.data == find_data:
             self.head = Node(insert_data, self.head)
@@ -97,6 +114,10 @@ linked_list.add_node(3)
 linked_list.add_node(9)
 linked_list.add_node(1)
 linked_list.add_node(6)
+
+linked_list.insert_node(9, 99)
+
+linked_list.delete_node(1)
 
 linked_list.print_list()
 
