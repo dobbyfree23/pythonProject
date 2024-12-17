@@ -17,6 +17,25 @@ class LinkedList:
         self.head = None
 
     def add_node(self, data):
+        '''
+        7 3 9 1 6
+        add_node(7)
+        data = 7
+        new_node = Node(7) # new_node.data = 7
+
+        self.head = Node(7)
+
+        add_node(3)
+        data = 3
+        new_node = Node(3)
+        current = Node(7)
+
+        add_node(9)
+
+        data = 9
+        new_node = Node(9)
+
+        '''
         new_node = Node(data)   # 새로운 노드 생성
 
         if self.head is None:
@@ -29,3 +48,57 @@ class LinkedList:
             current = current.next
 
         current.next = new_node
+
+
+    def insert_node(self, find_data, insert_data):
+        if self.head is None:
+            return
+
+        if self.head.data == find_data:
+            self.head = Node(insert_data, self.head)
+
+        current = self.head
+        while current.next is not None:
+            if current.next.data == find_data:
+                new_node = Node(insert_data, current.next)
+                current.next = new_node
+                return
+            current = current.next
+
+        self.add_node(insert_data)
+
+    def delete_node(self, del_data):
+        if self.head is None:
+            return
+
+        if self.head.data == del_data:
+            self.head = self.head.next
+            return
+
+        current = self.head
+
+        while current.next is not None:
+            if current.next.data == del_data:
+                current.next = current.next.next
+                return
+            current = current.next
+
+
+    def print_list(self):
+        current = self.head
+        while current is not None:
+            print(current.data, end=' ')
+            current = current.next
+
+# 실행코드
+linked_list = LinkedList()
+linked_list.add_node(7)
+linked_list.add_node(3)
+linked_list.add_node(9)
+linked_list.add_node(1)
+linked_list.add_node(6)
+
+linked_list.print_list()
+
+
+
