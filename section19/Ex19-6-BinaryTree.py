@@ -21,11 +21,40 @@ class BinaryTree:
         self.root = TreeNode(root) # 루트노드
 
     def preorder_traversal(self, start, traversal):
+        '''
+    preorder_traversal(bt.root, "")
+        start = TreeNode(5)
+        traversal = "5#"
+        preorder_traversal(TreeNode(3), "5#")  -> 5#3#2#4#
+                start = TreeNode(3)
+                traversal = "5#3#"
+                preorder_traversal(TreeNode(2), "5#3#") -> "5#3#2#"
+                    start = TreeNode(2)
+                    traversal = "5#3#2#"
+                    preorder_traversal(None, "5#3#2#")  -> "5#3#2#"
+                        start = None
+                        traversal = "5#3#2#"
+                    preorder_traversal(None, "5#3#2#")  -> "5#3#2#"
+                        start = None
+                        traversal = "5#3#2#"
+
+                preorder_traversal(TreeNode(4), "5#3#2#") -> 5#3#2#4#
+                     start = TreeNode(4)
+                     traversal = "5#3#2#4#"
+                     preorder_traversal(None, "5#3#2#4#")  -> "5#3#2#4#"
+                        start = None
+                        traversal = "5#3#2#4#"
+                     preorder_traversal(None, "5#3#2#4#")  -> "5#3#2#4#"
+                        start = None
+                        traversal = "5#3#2#4#"
+
+        preorder_traversal(TreeNode(7), "5#3#2#4#")  ->
+
+        '''
+
         if start:
             traversal += (str(start.value) + '#')
-
             traversal = self.preorder_traversal(start.left, traversal)
-
             traversal = self.preorder_traversal(start.right, traversal)
         return traversal
 
@@ -58,13 +87,63 @@ class BinaryTree:
             return self._search(value, current_node.right)
 
 
+    '''
+        3 
+        7 
+        2 
+        4 
+        6 8 
+    '''
     def insert(self, value):
+        '''
+        value = 2
+
+
+
+        '''
         if not self.root:
             self.root = TreeNode(value)
         else:
             self._insert(value, self.root)
 
     def _insert(self, value, current_node):
+        '''
+        value = 3
+        current_node = TreeNode(5)
+        current_node.left = TreeNode(3)
+        value = 7
+        current_node = TreeNode(5)
+        current_node.right = TreeNode(7)
+
+        value = 2
+        current_node = TreeNode(5)
+
+            _insert(2, TreeNode(3))
+                value = 2
+                current_node = TreeNode(3)
+                current_node.left = TreeNode(2)
+
+        value = 4
+        current_node = TreeNode(5)
+            _insert(4, TreeNode(3))
+                current_node = TreeNode(3)
+                current_node.right = TreeNode(4)
+
+        value = 6
+        current_node = TreeNode(5)
+            _insert(6, TreeNode(7))
+                current_node = TreeNode(7)
+                current_node.left = TreeNode(6)
+
+        value = 8
+        current_node = TreeNode(5)
+            _insert(8, TreeNode(7))
+                current_node = TreeNode(7)
+                current_node.right = TreeNode(8)
+
+
+        '''
+
         if value < current_node.value:
             if not current_node.left:   # current_node.left 값이 None 실행
                 current_node.left = TreeNode(value)
