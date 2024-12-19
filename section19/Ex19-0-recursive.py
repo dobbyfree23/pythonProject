@@ -1,5 +1,5 @@
 '''
-Ex20-0-recursive.py
+Ex19-0-recursive.py
 
 재귀함수(Recursive Function)
     함수 내부에서 자기자신을 호출하는 함수
