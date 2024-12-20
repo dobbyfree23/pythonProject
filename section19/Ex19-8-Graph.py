@@ -7,12 +7,45 @@
 '''
 class Graph:
     def __init__(self, vertices):
+        '''
+           vertices = ['A', 'B', 'C', 'D', 'E']
+           adj_list = {
+                    A:[],
+                    B:[],
+                    C:[],
+                    D:[],
+                    E:[]
+                }
+         '''
         self.vertices = vertices
-        self.adj_list = {}
+        self.adj_list = {}  # 딕셔너리
         for vertex in vertices:
+            '''
+                {
+                    A:[B, C],
+                    B:[A, D],
+                    C:[A, D, E],
+                    D:[B, C],
+                    E:[C]
+                }  
+            '''
             self.adj_list[vertex] = []
 
     def add_edge(self, u, v):
+        '''
+
+            graph.add_edge('A', 'B')
+
+                adj_list[A].append(B)
+                adj_list[B].append(A)
+
+            graph.add_edge('A', 'C')
+            graph.add_edge('B', 'D')
+            graph.add_edge('C', 'D')
+            graph.add_edge('C', 'E')
+
+
+        '''
         self.adj_list[u].append(v)
         self.adj_list[v].append(u)
 
@@ -21,9 +54,20 @@ class Graph:
         self.adj_list[v].remove(u)
 
     def print_graph(self):
+        '''
+           vertices = ['A', 'B', 'C', 'D', 'E']
+           adj_list = {
+                            A:[B, C],
+                            B:[A, D],
+                            C:[A, D, E],
+                            D:[B, C],
+                            E:[C]
+                        }
+       '''
         for vertex in self.vertices:
             print(vertex, end=' -> ')
             print(' -> '.join(str(node) for node in self.adj_list[vertex]))
+
 
 # 실행코드
 vertices = ['A', 'B', 'C', 'D', 'E']
