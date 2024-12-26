@@ -1,8 +1,6 @@
 '''
 파일명: Ex23-2-matplotlib.py
 '''
-from cProfile import label
-
 import matplotlib.pyplot as plt
 
 # Figure와 Axes 객체 동시생성
