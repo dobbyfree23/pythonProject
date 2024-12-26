@@ -1,5 +1,5 @@
 '''
-파일명: Ex23-4-QuickSort.py
+파일명: Ex22-4-QuickSort.py
 
 퀵 정렬(Quick Sort)
     분할 정복 알고리즘, 기준점(pivot)을 설정하고

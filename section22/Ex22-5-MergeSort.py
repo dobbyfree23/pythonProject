@@ -1,5 +1,5 @@
 '''
-파일명: Ex23-5-MergeSort.py
+파일명: Ex22-5-MergeSort.py
 
 병합정렬(Merge Sort)
     분할 정복 알고리즘의 일종으로, 리스트를 절반으로 나눈 후
