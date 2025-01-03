@@ -29,10 +29,8 @@ class MultiAIApp:
         self.style.configure('Title.TLabel', font=('Helvetica', 12, 'bold'))
         self.style.configure('Status.TLabel', font=('Helvetica', 10))
 
-        api_key = ''
-
         # OpenAI 클라이언트 및 대화 기록 초기화
-        self.client = OpenAI(api_key=api_key)
+        self.client = OpenAI()
         self.conversation_history = []
 
         # UI 요소 초기화
